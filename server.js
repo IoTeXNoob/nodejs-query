@@ -32,7 +32,7 @@ async function getTransactions() {
     })
     let sum;
     let amount = await results.json();
-    sum = amount.data.token_erc20.reduce((acc, current) => acc + current.amount, 0);
+    sum = (amount.data.token_erc20.reduce((acc, current) => acc + current.amount, 0)).toString();  /*               convert to string for processing                           */
     console.log(sum);
 }
 
