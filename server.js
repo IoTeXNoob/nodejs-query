@@ -12,7 +12,7 @@ async function getTransactions() {
         },
 
         body: JSON.stringify({
-            query: queryParams
+            query:
                 `{
                             token_erc20 (where :{
                                 _and:[
